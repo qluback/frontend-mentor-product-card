@@ -1,0 +1,152 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(212, 21%, 14%);
+  font-weight: 500;
+}
+
+.product {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 640px) {
+  .product {
+    flex-direction: row;
+    max-width: 600px;
+  }
+}
+.product__image {
+  border-radius: 1rem 1rem 0 0;
+}
+@media screen and (min-width: 640px) {
+  .product__image {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+}
+.product__content {
+  padding: 2rem;
+}
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(228, 12%, 48%);
+}
+.product__title {
+  font-family: "Fraunces", sans-serif;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+.product__description {
+  color: hsl(228, 12%, 48%);
+}
+.product__prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.product__price {
+  font-size: 2rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+.product__price--is-crossed-out {
+  text-decoration: line-through;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+.product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(158, 36%, 37%);
+  gap: 0.75rem;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.product__button:hover {
+  background: hsl(151, 27%, 19%);
+  cursor: pointer;
+}
+.product__button img {
+  width: 1rem;
+  height: 1rem;
+}
+
+img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
